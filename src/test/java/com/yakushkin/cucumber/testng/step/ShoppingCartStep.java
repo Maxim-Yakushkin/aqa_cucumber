@@ -1,6 +1,5 @@
 package com.yakushkin.cucumber.testng.step;
 
-import com.yakushkin.onliner.pageobject.Cart;
 import com.yakushkin.onliner.pageobject.CartPage;
 import com.yakushkin.onliner.pageobject.ProductPage;
 import io.cucumber.java.en.And;
@@ -12,7 +11,7 @@ public class ShoppingCartStep {
 
     private static final String PRODUCT_PAGE_URL = "https://catalog.onliner.by/videocard/gigabyte/gvn407teagleoc12";
     private final ProductPage productPage = new ProductPage();
-    private Cart cart = null;
+    private final CartPage cart = new CartPage();
 
     @Given("the user opened any product page")
     public void theUserOpenedAnyProductPage() {
@@ -31,13 +30,12 @@ public class ShoppingCartStep {
 
     @And("the user click on shopping cart icon")
     public void theUserClickOnShoppingCartIcon() {
-        cart = productPage.clickOnShoppingCartIcon();
+        productPage.clickOnShoppingCartIcon();
     }
 
     @Then("the shopping cart contains the previously selected product")
     public void theShoppingCartContainsThePreviouslySelectedProduct() {
-        CartPage cartPage = (CartPage) cart;
-        cartPage.clickOnProductLink();
+        cart.clickOnProductLink();
         productPage.verifyCurrentProductUrl(PRODUCT_PAGE_URL);
     }
 }

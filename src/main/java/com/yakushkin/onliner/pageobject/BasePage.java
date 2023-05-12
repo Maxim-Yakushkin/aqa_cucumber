@@ -52,12 +52,10 @@ public abstract class BasePage {
         return new LoginForm();
     }
 
-    public CartPage clickOnShoppingCartIcon() {
+    public void clickOnShoppingCartIcon() {
         $$x("//div[@class='auth-bar auth-bar--top']//a[@href='https://cart.onliner.by']")
                 .first()
                 .shouldBe(visible, ofSeconds(30))
                 .click();
-
-        return new CartPage();
     }
 }

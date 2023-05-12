@@ -9,9 +9,8 @@ import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.back;
 import static java.time.Duration.ofSeconds;
 
-public class CartPage implements Cart {
+public class CartPage {
 
-    @Override
     public void clickOnBrowserBackArrow() {
         back();
     }
