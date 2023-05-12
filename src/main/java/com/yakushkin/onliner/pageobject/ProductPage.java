@@ -35,4 +35,10 @@ public class ProductPage extends BasePage {
                 .shouldBe(visible, ofSeconds(10))
                 .click();
     }
+
+    public void verifyOrderButtonHasNameInCart(String buttonName) {
+        $$x(String.format(XPATH_EXPRESSION, buttonName))
+                .first()
+                .shouldBe(visible, ofSeconds(5));
+    }
 }

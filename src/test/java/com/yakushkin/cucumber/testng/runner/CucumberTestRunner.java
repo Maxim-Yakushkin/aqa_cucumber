@@ -9,10 +9,10 @@ import io.cucumber.testng.CucumberOptions;
                 "junit:target/cucumber-reports/CucumberTestRunner.xml"
         },
         monochrome = true,
-        tags = "@smoke",
+        tags = "@Scenario_1",
         glue = "com.yakushkin.cucumber.testng",
         features = "classpath:com/yakushkin/cucumber/testng/feature"
 )
-public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
+public class CucumberTestRunner extends AbstractTestNGCucumberTests {
 
 }
