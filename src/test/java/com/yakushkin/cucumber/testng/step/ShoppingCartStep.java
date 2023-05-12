@@ -8,6 +8,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * The ShoppingCartStep has the same scenario steps ordering as feature file.
+ * Therefore, the annotations @And have not been changed to @When to avoid confusion.
+ */
 public class ShoppingCartStep {
 
     private final ProductPage productPage = new ProductPage();
