@@ -13,9 +13,6 @@
         <maven.compiler.target>18</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <defaultDriverType>edge</defaultDriverType>
-        <aspectj.version>1.9.19</aspectj.version>
-        <allure.version>2.21.0</allure.version>
-        <allure.reportVersion>2.7.0</allure.reportVersion>
     </properties>
 
     <dependencies>
